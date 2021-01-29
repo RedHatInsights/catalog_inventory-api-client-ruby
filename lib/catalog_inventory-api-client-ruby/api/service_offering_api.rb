@@ -20,22 +20,22 @@ module CatalogInventoryApiClient
       @api_client = api_client
     end
     # Invokes computing of ServiceInventories tags for given ServiceOffering
-    # Returns a collection of inventories tags
+    # Returns an array of inventories tags
     # @param id [String] ID of the resource
     # @param applied_inventories_parameters_service_plan [AppliedInventoriesParametersServicePlan] Parameters defining input data for computing inventories
     # @param [Hash] opts the optional parameters
-    # @return [TagsCollection]
+    # @return [Array<Tag>]
     def applied_inventories_tags_for_service_offering(id, applied_inventories_parameters_service_plan, opts = {})
       data, _status_code, _headers = applied_inventories_tags_for_service_offering_with_http_info(id, applied_inventories_parameters_service_plan, opts)
       data
     end
 
     # Invokes computing of ServiceInventories tags for given ServiceOffering
-    # Returns a collection of inventories tags
+    # Returns an array of inventories tags
     # @param id [String] ID of the resource
     # @param applied_inventories_parameters_service_plan [AppliedInventoriesParametersServicePlan] Parameters defining input data for computing inventories
     # @param [Hash] opts the optional parameters
-    # @return [Array<(TagsCollection, Integer, Hash)>] TagsCollection data, response status code and response headers
+    # @return [Array<(Array<Tag>, Integer, Hash)>] Array<Tag> data, response status code and response headers
     def applied_inventories_tags_for_service_offering_with_http_info(id, applied_inventories_parameters_service_plan, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ServiceOfferingApi.applied_inventories_tags_for_service_offering ...'
@@ -73,7 +73,7 @@ module CatalogInventoryApiClient
       post_body = opts[:body] || @api_client.object_to_http_body(applied_inventories_parameters_service_plan) 
 
       # return_type
-      return_type = opts[:return_type] || 'TagsCollection' 
+      return_type = opts[:return_type] || 'Array<Tag>' 
 
       # auth_names
       auth_names = opts[:auth_names] || ['UserSecurity']

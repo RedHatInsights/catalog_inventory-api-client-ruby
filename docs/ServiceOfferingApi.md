@@ -20,11 +20,11 @@ Method | HTTP request | Description
 
 ## applied_inventories_tags_for_service_offering
 
-> TagsCollection applied_inventories_tags_for_service_offering(id, applied_inventories_parameters_service_plan)
+> Array&lt;Tag&gt; applied_inventories_tags_for_service_offering(id, applied_inventories_parameters_service_plan)
 
 Invokes computing of ServiceInventories tags for given ServiceOffering
 
-Returns a collection of inventories tags
+Returns an array of inventories tags
 
 ### Example
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TagsCollection**](TagsCollection.md)
+[**Array&lt;Tag&gt;**](Tag.md)
 
 ### Authorization
 

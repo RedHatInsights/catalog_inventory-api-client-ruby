@@ -34,11 +34,11 @@ describe 'ServiceOfferingApi' do
 
   # unit tests for applied_inventories_tags_for_service_offering
   # Invokes computing of ServiceInventories tags for given ServiceOffering
-  # Returns a collection of inventories tags
+  # Returns an array of inventories tags
   # @param id ID of the resource
   # @param applied_inventories_parameters_service_plan Parameters defining input data for computing inventories
   # @param [Hash] opts the optional parameters
-  # @return [TagsCollection]
+  # @return [Array<Tag>]
   describe 'applied_inventories_tags_for_service_offering test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
