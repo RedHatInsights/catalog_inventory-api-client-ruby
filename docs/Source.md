@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **created_at** | **DateTime** |  | [optional] [readonly] 
 **id** | **String** | ID of the resource | [optional] [readonly] 
 **info** | [**Object**](.md) |  | [optional] [readonly] 
+**name** | **String** |  | [optional] [readonly] 
 **mqtt_client_id** | **String** |  | [optional] [readonly] 
 **enabled** | **Boolean** |  | [optional] [readonly] [default to false]
 **refresh_state** | **String** |  | [optional] 
@@ -31,6 +32,7 @@ instance = CatalogInventoryApiClient::Source.new(archived_at: null,
                                  created_at: null,
                                  id: null,
                                  info: The version of Tower being used,
+                                 name: The Source Name,
                                  mqtt_client_id: The GUID of MQTT client being used,
                                  enabled: null,
                                  refresh_state: null,

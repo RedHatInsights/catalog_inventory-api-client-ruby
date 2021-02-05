@@ -23,6 +23,8 @@ module CatalogInventoryApiClient
 
     attr_accessor :info
 
+    attr_accessor :name
+
     attr_accessor :mqtt_client_id
 
     attr_accessor :enabled
@@ -56,6 +58,7 @@ module CatalogInventoryApiClient
         :'created_at' => :'created_at',
         :'id' => :'id',
         :'info' => :'info',
+        :'name' => :'name',
         :'mqtt_client_id' => :'mqtt_client_id',
         :'enabled' => :'enabled',
         :'refresh_state' => :'refresh_state',
@@ -79,6 +82,7 @@ module CatalogInventoryApiClient
         :'created_at' => :'DateTime',
         :'id' => :'String',
         :'info' => :'Object',
+        :'name' => :'String',
         :'mqtt_client_id' => :'String',
         :'enabled' => :'Boolean',
         :'refresh_state' => :'String',
@@ -130,6 +134,10 @@ module CatalogInventoryApiClient
 
       if attributes.key?(:'info')
         self.info = attributes[:'info']
+      end
+
+      if attributes.key?(:'name')
+        self.name = attributes[:'name']
       end
 
       if attributes.key?(:'mqtt_client_id')
@@ -226,6 +234,7 @@ module CatalogInventoryApiClient
           created_at == o.created_at &&
           id == o.id &&
           info == o.info &&
+          name == o.name &&
           mqtt_client_id == o.mqtt_client_id &&
           enabled == o.enabled &&
           refresh_state == o.refresh_state &&
@@ -250,7 +259,7 @@ module CatalogInventoryApiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [archived_at, created_at, id, info, mqtt_client_id, enabled, refresh_state, bytes_received, bytes_sent, refresh_started_at, refresh_finished_at, availability_status, last_successful_refresh_at, last_checked_at, last_available_at, uid, updated_at].hash
+      [archived_at, created_at, id, info, name, mqtt_client_id, enabled, refresh_state, bytes_received, bytes_sent, refresh_started_at, refresh_finished_at, availability_status, last_successful_refresh_at, last_checked_at, last_available_at, uid, updated_at].hash
     end
 
     # Builds the object from hash
